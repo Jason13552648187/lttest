@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{template "content","header_seo"}
+	
+	<link rel="stylesheet" href="./css/font.css">
+	<script src="./js/jquery.min.js"></script>
+	<script src="/js/scroll.js"></script>
+</head>
+<body>
+	{template "content","header_min2"}
+<style>
+.course-content-box .right {width: 438px;}
+.course-content-box .middle .time span{font-size:14px;}
+.course-content-box .middle .list span:first-child{font-size:14px;}
+.course-content-box .right .middle a{background:#fff; width: 200px;height: 100px;}
+.nav-content-center img{ height: 454px; display:block;}
+.scroll {
+    display: inline-block;
+    width: 654px;
+    overflow: hidden;
+    color: aliceblue;
+}
+.scroll .sc {
+    height: 40px;
+/*    line-height: 40px;*/
+    background-color: #8DE877;
+    width: 654px;
+}
+
+.scroll .sc li {
+    float: left;
+    color: #333;
+    font-size: 12x;
+	margin-top:10px;
+}
+
+.scroll-msg {
+    margin: 0 auto;
+    width: 668px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.scroll-msg span {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+
+.scroll-msg ul li {
+    height: 38px;
+    line-height: 38px;
+    color: #333;
+}
+
+.scroll-msg ul .lix1 {
+    background-color: #A4E19480;
+}
+
+.scroll-msg ul .lix2 {
+    background-color: #ffffff;
+}
+
+.scroll .s1 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-align: center;
+    width: 10%;
+}
+
+.scroll .s2 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-align: center;
+    width: 10%;
+}
+
+.scroll .s3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-align: center;
+    width: 25%;
+}
+
+.scroll .s4 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-align: center;
+    width: 15%;
+}
+
+.scroll .s5 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-align: center;
+    width: 20%;
+}
+
+.scroll .s6 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-align: center;
+    width: 20%;
+}
+.course-content-box .middle{
+	padding:40px 20px 40px 25px;
+}
+.course-content-box .middle .list span{
+	font-size: 14px;
+}
+.course-content-box .middle .list p:first-child {
+    margin-left: 0px;
+}
+.course-content-box .middle .list p {
+    width: 145px;
+}
+.course-content-box .right .bottom img{
+	width: 440px;
+}
+.technology-content-right{
+	width: 508px;
+}
+.technology-content-right-box{
+	border-radius:4px;
+	
+}
+
+.container {
+    background: #fff;
+    width:1200px; 
+	height: 210px;
+	border-radius:4px;
+}
+#container{ 
+	width:1160px; 
+	height: 171px;
+	margin:0 auto; 
+	overflow: hidden; 
+	position: relative; 
+	padding-top:20px;
+} 
+  
+#container ul{ 
+	list-style: none; 
+	width:100000px; 
+	position: absolute; 
+} 
+  
+#container ul li{ 
+	float:left; 
+	margin-right: 20px; 
+} 
+.footer img{
+	border-radius: 0;
+}
+</style>
+	<div class="Page">
+	<!-- page start -->
+		<div class="nav-content mt30">
+			<div class="nav-content-left fl radius-box shadow">
+				{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+						{loop $data $k=>$r}
+						{if $r[type] ==1}
+				<div class="box">
+					<a {if $k==9} class="on" {/if} href="{$r[url]}" target="_blank">
+						<span class="top">{$r[catname]}</span>
+						<span class="bot">{$r[description]}</span>
+					</a>
+					<ul class="sub">
+						<li>
+							<a href="{$r[url]}" target="_blank">
+								<i class="icon-kecheng"></i>
+								<p>课程大纲</p>
+							</a>
+						</li>
+						<li>
+							<a href="/index.php?m=content&c=index&a=lists&catid=15#j2" target="_blank">
+								<i class="icon-xinzi"></i>
+								<p>就业薪资</p>
+							</a>
+						</li>
+						<li>
+							<a href="{$r[url]}" target="_blank">
+								<i class="icon-kecheng2"></i>
+								<p>课程详情</p>
+							</a>
+						</li>
+						<li>
+							<a href="https://hkrtest.ke.qq.com/#tab=1&category=-1&tuin=4d2fc0ee" target="_blank">
+								<i class="icon-shipin2"></i>
+								<p>视频课程</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+					{/if}
+				{/loop}
+				{/pc}
+			</div>
+			<div class="subs">
+			</div>
+			<div class="nav-content-center fl radius-box shadow">
+			    <div class="swiper-container">
+			        <div class="swiper-container">
+				        <div class="swiper-wrapper">
+				            <div class="swiper-slide"><a href="/index.php?m=content&c=index&a=lists&catid=9" target="_blank"><img src="/images/b-01.jpg"></a></div>
+				            <div class="swiper-slide"><a href="/index.php?m=content&c=index&a=lists&catid=10" target="_blank"><img src="/images/b-02.jpg"></a></div>
+				            <div class="swiper-slide"><a href="/index.php?m=content&c=index&a=lists&catid=11" target="_blank"><img src="/images/b-03.jpg"></a></div>
+				            <div class="swiper-slide"><a href="/index.php?m=content&c=index&a=lists&catid=12" target="_blank"><img src="/images/b-04.jpg"></a></div>
+				            <div class="swiper-slide"><a href="/index.php?m=content&c=index&a=lists&catid=13" target="_blank"><img src="/images/b-05.jpg"></a></div>
+				        </div>
+				        <div class="swiper-pagination"></div>
+				        <div class="swiper-button-prev" style="display:none;"></div>
+				        <div class="swiper-button-next" style="display:none;"></div>
+				    </div>
+			    </div>
+			    <div class="clear"></div>
+			</div>
+
+			<div class="nav-content-right fl">
+				<div class="nav-content-right-top radius-box shadow">
+					<a href="/index.php?m=content&c=index&a=lists&catid=9" target="_blank">
+						<img src="./images/25.png" alt="">
+					</a>
+					<a class="tit ellipsis" href="/index.php?m=content&c=index&a=lists&catid=9" target="_blank">测试开发工程师一个高薪就业的机会</a>
+					<a class="con" href="/index.php?m=content&c=index&a=lists&catid=9" target="_blank">截止到目前。汉科软教育集团已经在全国各大重点城市招生测试开发工程师学员</a>
+					<a class="link" href="/index.php?m=content&c=index&a=lists&catid=9" target="_blank">查看原文&gt;&gt;</a>
+				</div>
+
+				<div class="list-box radius-box shadow">
+					<ul class="list radius-box">
+						<li class="a1"><p></p><a href="/index.php?m=content&c=index&a=show&catid=19&id=2" target="_blank">班级活动</a></li>
+						<li class="a2"><p></p><a href="https://hkrtest.ke.qq.com/#tab=1&category=-1&tuin=4d2fc0ee" target="_blank">视频教程</a></li>
+						<li class="a3"><p></p><a href="/index.php?m=content&c=index&a=lists&catid=15" target="_blank">学院感言</a></li>
+						<li class="a4"><p></p><a href="/index.php?m=content&c=index&a=show&catid=19&id=3" target="_blank">校园环境</a></li>
+						<li class="a5"><p></p><a href="/index.php?m=content&c=index&a=show&catid=19&id=4" target="_blank">来校路线</a></li>
+						<li class="a6"><p></p><a href="/index.php?m=content&c=index&a=show&catid=19&id=5" target="_blank">报名流程</a></li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="film-content mt30">
+			<div class="page-title-box"><a class="page-title" href="javascript:;" target="_blank">狼腾电影集</a><div class="clear"></div></div>
+			<div class="film-content-box">
+				<div class="fl item" onclick="$(this).find('video')[0].play();$(this).find('video')[0].controls='controls';$(this).find('.show').hide()">
+					<video src="/newvideo/00000011111.mp4" poster="./images/09.png"></video>
+					<p class="show">
+						<span class="tit">学生就业采访集</span>
+						<span class="button">立即播放</span>
+					</p>
+				</div>
+				<div class="fr item" onclick="$(this).find('video')[0].play();$(this).find('video')[0].controls='controls';$(this).find('.show').hide()">
+					<video src="/newvideo/daxueshengguihua.mp4" poster="./images/09s.png"></video>
+					<p class="show">
+						<span class="tit">大学生就业规划</span>
+						<span class="button">立即播放</span>
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div class="course-content mt30">
+			<div class="page-title-box"><a class="page-title" href="javascript:;" target="_blank">课程体系</a><div class="clear"></div></div>
+			
+			
+			<!--{-pc:block pos="index_ceshikaifa"}{/pc}-->
+			<div class="course-content-box radius-box">
+				<div class="left len-icon-01 fl">
+					<h2>测试开发实战班</h2>
+					<p>测试大神的成长之路</p>
+					<a class="radius-box" href="/index.php?m=content&c=index&a=lists&catid=9" target="_blank">进入课程体系</a>
+				</div>
+				<div class="middle fl">
+					<h2>测试开发实战班</h2>
+					<div class="nums">
+						<div class="main">
+							<div class="full" id='dd1' style="top:0%"></div>
+							<div class="mk"> </div>
+							<div class="zhuan"> </div>
+							<p id='d1'>100%</p>
+							<span>即将开班</span>
+						</div>
+					</div>
+					<div class="list">
+						<p>
+							<span>开班地点</span>
+							<span>北京&nbsp;</span>
+						</p>
+						<p> 
+							<span>开班时间</span>
+							<span id="s1">2018/04/15</span>
+						</p>
+						<p>
+							<span>开班倒计时</span>
+							<span id="t1"></span>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<button onclick="window.open('http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1')">立即报名</button>
+					<div class="time">
+						<span><script> document.write($('#s1').text());</script></span>
+						<span>测试开发实战班</span>
+						<span class="last">火爆招生</span>
+						<div class="clear"></div>
+					</div>
+					<div class="time">
+						<span>2018/04/18</span>
+						<span>测试开发实战班</span>
+						<span class="last">即将开班</span>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="right fl">
+					<div class="top">
+						<a class="fl" href="/index.php?m=content&c=index&a=lists&catid=9" target="_blank">
+							<img class="fl" src="/images/15.png" alt="">
+							<p class="fl"><span>课程大纲&gt;&gt;</span>获取课程大纲</p>
+						</a>
+						<a class="fr" href="/index.php?m=content&c=index&a=lists&catid=9" target="_blank">
+							<img class="fl" src="/images/16.png" alt="">
+							<p class="fl"><span>了解课程&gt;&gt;</span>点击向老师了解课程</p>
+						</a>
+						<div class="clear"></div>
+					</div>
+					<div class="middle">
+						<a class="fl" href="https://hkrtest.ke.qq.com/#tab=1&category=-1&tuin=4d2fc0ee" target="_blank"><img src="/images/598b015c8c751.png" style="width:200px;height:100px;" ></a>
+						<a class="fr" href="http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1" target="_blank"><img src="/images/582c2d50c4727.png" style="width:200px;height:100px;" ></a>
+						<div class="clear"></div>
+					</div>
+					<div class="bottom">
+						<a class="tit" href="/index.php?m=content&c=index&a=lists&catid=6" target="_blank">狼腾热点&gt;&gt;</a>
+						<a class="a-img" target="_blank" href="/index.php?m=content&c=index&a=lists&catid=6">
+							<img src="/images/ruance.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<!-- 2 -->
+			<!--{-pc:block pos="index_xingnengzidonghua"}{/pc}-->
+			<div class="course-content-box radius-box">
+				<div class="left len-icon-02 fl">
+					<h2>性能自动化测试班</h2>
+					<p>高级性能分析师的摇篮</p>
+					<a class="radius-box" href="/index.php?m=content&c=index&a=lists&catid=10" target="_blank">进入课程体系</a>
+				</div>
+				<div class="middle fl">
+					<h2>性能自动化测试班</h2>
+					<div class="nums">
+						<div class="main">
+							<div class="full" id='dd2' style="top:-50%"></div>
+							<div class="mk"> </div>
+							<div class="zhuan"> </div>
+							<p id='d2'>50%</p>
+							<span>即将开班</span>
+						</div>
+					</div>
+					<div class="list">
+						<p>
+							<span>开班地点</span>
+							<span>北京&nbsp;</span>
+						</p>
+						<p>
+							<span>开班时间</span>
+							<span id="s2">2018/04/21</span>
+						</p>
+						<p>
+							<span>开班倒计时</span>
+							<span id='t2'>提前即将</span>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<button onclick="window.open('http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1')">立即报名</button>
+					<div class="time">
+						<span><script> document.write($('#s2').text());</script></span>
+						<span>性能自动化测试班</span>
+						<span class="last">火爆招生</span>
+						<div class="clear"></div>
+					</div>
+					<div class="time">
+						<span>2018/01/16</span>
+						<span>性能自动化测试班</span>
+						<span class="last">即将开班</span>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="right fl">
+					<div class="top">
+						<a class="fl" href="/index.php?m=content&c=index&a=lists&catid=10" target="_blank">
+							<img class="fl" src="/images/15.png" alt="">
+							<p class="fl"><span>课程大纲&gt;&gt;</span>获取课程大纲</p>
+						</a>
+						<a class="fr" href="/index.php?m=content&c=index&a=lists&catid=10" target="_blank">
+							<img class="fl" src="/images/16.png" alt="">
+							<p class="fl"><span>了解课程&gt;&gt;</span>点击向老师了解课程</p>
+						</a>
+						<div class="clear"></div>
+					</div>
+					<div class="middle">
+						<a class="fl" href="https://hkrtest.ke.qq.com/#tab=1&category=-1&tuin=4d2fc0ee" target="_blank"><img src="/images/598b015c8c751.png" style="width:200px;height:100px;" ></a>
+						<a class="fr" href="http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1" target="_blank"><img src="/images/582c2d50c4727.png" style="width:200px;height:100px;" ></a>
+						<div class="clear"></div>
+					</div>
+					<div class="bottom">
+						<a class="tit" href="/index.php?m=content&c=index&a=lists&catid=6" target="_blank">狼腾热点&gt;&gt;</a>
+						<a class="a-img" target="_blank" href="/index.php?m=content&c=index&a=lists&catid=6">
+							<img src="/images/xingnengzidong.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!-- 3 -->
+			<!--{-pc:block pos="index_wangluoanquan"}{/pc}-->
+			<div class="course-content-box radius-box">
+				<div class="left len-icon-03 fl">
+					<h2>网络安全渗透测试班</h2>
+					<p>红客VS黑客</p>
+					<a class="radius-box" href="/index.php?m=content&c=index&a=lists&catid=11" target="_blank">进入课程体系</a>
+				</div>
+				<div class="middle fl">
+					<h2>网络安全渗透测试班</h2>
+					<div class="nums">
+						<div class="main">
+							<div class="full" id='dd3' style="top:-50%"></div>
+							<div class="mk"> </div>
+							<div class="zhuan"> </div>
+							<p id='d3'>50%</p>
+							<span>即将开班</span>
+						</div>
+					</div>
+					<div class="list">
+						<p>
+							<span>开班地点</span>
+							<span>北京&nbsp;</span>
+						</p>
+						<p>
+							<span>开班时间</span>
+							<span id='s3'>2018/04/21</span>
+						</p>
+						<p>
+							<span>开班倒计时</span>
+							<span id='t3'>提前即将</span>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<button onclick="window.open('http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1')">立即报名</button>
+					<div class="time">
+						<span><script> document.write($('#s3').text());</script></span>
+						<span>网络安全渗透测试班</span>
+						<span class="last">火爆招生</span>
+						<div class="clear"></div>
+					</div>
+					<div class="time">
+						<span>2017/12/25</span>
+						<span>网络安全渗透测试班</span>
+						<span class="last">即将开班</span>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="right fl">
+					<div class="top">
+						<a class="fl" href="/index.php?m=content&c=index&a=lists&catid=11" target="_blank">
+							<img class="fl" src="/images/15.png" alt="">
+							<p class="fl"><span>课程大纲&gt;&gt;</span>获取课程大纲</p>
+						</a>
+						<a class="fr" href="/index.php?m=content&c=index&a=lists&catid=11" target="_blank">
+							<img class="fl" src="/images/16.png" alt="">
+							<p class="fl"><span>了解课程&gt;&gt;</span>点击向老师了解课程</p>
+						</a>
+						<div class="clear"></div>
+					</div>
+					<div class="middle">
+						<a class="fl" href="https://hkrtest.ke.qq.com/#tab=1&category=-1&tuin=4d2fc0ee" target="_blank"><img src="/images/598b015c8c751.png" style="width:200px;height:100px;" ></a>
+						<a class="fr" href="http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1" target="_blank"><img src="/images/582c2d50c4727.png" style="width:200px;height:100px;" ></a>
+						<div class="clear"></div>
+					</div>
+					<div class="bottom">
+						<a class="tit" href="/index.php?m=content&c=index&a=lists&catid=6" target="_blank">狼腾热点&gt;&gt;</a>
+						<a class="a-img" target="_blank" href="/index.php?m=content&c=index&a=lists&catid=6">
+							<img src="/images/wangluoaq.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!-- 4 -->
+			<!--{-pc:block pos="index_py"}{/pc}-->
+			<div class="course-content-box radius-box">
+				<div class="left len-icon-04 fl">
+					<h2>python自动化开发班</h2>
+					<p>面向未来的开发神技</p>
+					<a class="radius-box" href="/index.php?m=content&c=index&a=lists&catid=12" target="_blank">进入课程体系</a>
+				</div>
+				<div class="middle fl">
+					<h2>python自动化开发班</h2>
+					<div class="nums">
+						<div class="main">
+							<div class="full" id='dd4' style="top:-50%"></div>
+							<div class="mk"> </div>
+							<div class="zhuan"> </div>
+							<p id='d4'>50%</p>
+							<span>即将开班</span>
+						</div>
+					</div>
+					<div class="list">
+						<p>
+							<span>开班地点</span>
+							<span>北京&nbsp;</span>
+						</p>
+						<p>
+							<span>开班时间</span>
+							<span id='s4'>2018/04/19</span>
+						</p>
+						<p>
+							<span>开班倒计时</span>
+							<span id='t4'>提前即将</span>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<button onclick="window.open('http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1')">立即报名</button>
+					<div class="time">
+						<span ><script> document.write($('#s4').text());</script></span>
+						<span>python自动化开发班</span>
+						<span class="last">火爆招生</span>
+						<div class="clear"></div>
+					</div>
+					<div class="time">
+						<span>2017/12/25</span>
+						<span>python自动化开发班</span>
+						<span class="last">即将开班</span>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="right fl">
+					<div class="top">
+						<a class="fl" href="/index.php?m=content&c=index&a=lists&catid=12" target="_blank">
+							<img class="fl" src="/images/15.png" alt="">
+							<p class="fl"><span>课程大纲&gt;&gt;</span>获取课程大纲</p>
+						</a>
+						<a class="fr" href="/index.php?m=content&c=index&a=lists&catid=12" target="_blank">
+							<img class="fl" src="/images/16.png" alt="">
+							<p class="fl"><span>了解课程&gt;&gt;</span>点击向老师了解课程</p>
+						</a>
+						<div class="clear"></div>
+					</div>
+					<div class="middle">
+						<a class="fl" href="https://hkrtest.ke.qq.com/#tab=1&category=-1&tuin=4d2fc0ee" target="_blank"><img src="/images/598b015c8c751.png" style="width:200px;height:100px;" ></a>
+						<a class="fr" href="http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1" target="_blank"><img src="/images/582c2d50c4727.png" style="width:200px;height:100px;" ></a>
+						<div class="clear"></div>
+					</div>
+					<div class="bottom">
+						<a class="tit" href="/index.php?m=content&c=index&a=lists&catid=6" target="_blank">狼腾热点&gt;&gt;</a>
+						<a class="a-img" target="_blank" href="/index.php?m=content&c=index&a=lists&catid=6">
+							<img src="/images/pypyp.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<!-- 5 -->
+			<!--{pc:block pos="index_gaojiguanli"}{/pc}-->
+			<div class="course-content-box radius-box">
+				<div class="left len-icon-05 fl">
+					<h2>高级测试管理班</h2>
+					<p>落实管理提高效率</p>
+					<a class="radius-box" href="/index.php?m=content&c=index&a=lists&catid=13" target="_blank">进入课程体系</a>
+				</div>
+				<div class="middle fl">
+					<h2>高级测试管理班</h2>
+					<div class="nums">
+						<div class="main">
+							<div class="full" id='dd5' style="top:-50%"></div>
+							<div class="mk"> </div>
+							<div class="zhuan"> </div>
+							<p id='d5'>50%</p>
+							<span>即将开班</span>
+						</div>
+					</div>
+					<div class="list">
+						<p>
+							<span>开班地点</span>
+							<span >北京&nbsp;</span>
+						</p>
+						<p>
+							<span>开班时间</span>
+							<span id='s5'>2018/04/16</span>
+						</p>
+						<p>
+							<span>开班倒计时</span>
+							<span id='t5'>提前即将</span>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<button onclick="window.open('http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1')">立即报名</button>
+					<div class="time">
+						<span><script> document.write($('#s5').text());</script></span>
+						<span>高级测试管理班</span>
+						<span class="last">火爆招生</span>
+						<div class="clear"></div>
+					</div>
+					<div class="time">
+						<span>2017/12/25</span>
+						<span>高级测试管理班</span>
+						<span class="last">即将开班</span>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="right fl">
+					<div class="top">
+						<a class="fl" href="/index.php?m=content&c=index&a=lists&catid=13" target="_blank">
+							<img class="fl" src="/images/15.png" alt="">
+							<p class="fl"><span>课程大纲&gt;&gt;</span>获取课程大纲</p>
+						</a>
+						<a class="fr" href="/index.php?m=content&c=index&a=lists&catid=13" target="_blank">
+							<img class="fl" src="/images/16.png" alt="">
+							<p class="fl"><span>了解课程&gt;&gt;</span>点击向老师了解课程</p>
+						</a>
+						<div class="clear"></div>
+					</div>
+					<div class="middle">
+						<a class="fl" href="https://hkrtest.ke.qq.com/#tab=1&category=-1&tuin=4d2fc0ee" target="_blank"><img src="/images/598b015c8c751.png" style="width:200px;height:100px;" ></a>
+						<a class="fr" href="http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1" target="_blank"><img src="/images/582c2d50c4727.png" style="width:200px;height:100px;" ></a>
+						<div class="clear"></div>
+					</div>
+					<div class="bottom">
+						<a class="tit" href="/index.php?m=content&c=index&a=lists&catid=6" target="_blank">狼腾热点&gt;&gt;</a>
+						<a class="a-img" target="_blank" href="/index.php?m=content&c=index&a=lists&catid=6">
+							<img src="/images/gaojiguanl.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+		</div>
+
+		<div class="teacher-content mt30">
+			<div class="page-title-box"><a class="page-title" href="javascript:;" target="_blank">师资介绍</a><div class="clear"></div></div>
+			<ul class="tea-list">
+				<li>
+					<a class="a-img" href="javascript:;" target="_blank">
+						<img src="./images/2017050355484197.png" alt="">
+					</a>
+					<a class="tea1" href="javascript:;">曹士明</a>
+					<a class="tea2" href="javascript:;">高级讲师</a>
+					<a class="tea3" href="javascript:;">多年软件测试经验和教学经验，尤其精通软件测试和测试工具研发，还提出了规范的、开源的系统测试流程及测试框架，目前在国内软件公司使用率非常高。</a>
+					<ul class="tea-list-child">
+						<li>软件测试</li>
+						<li>测试工具研发</li>
+						<li>selenium</li>
+						<li>appium</li>
+						<li>python</li>
+						<li>Jenkins</li>
+						<li>安全渗透测试</li>
+						<div class="clear"></div>
+					</ul>
+					<div class="tea4-box">
+						<a class="tea4" href="/index.php?m=content&c=index&a=lists&catid=18" target="_blank">查看更多简介</a>
+					</div>
+				</li>
+				<li>
+					<a class="a-img" href="javascript:;" target="_blank">
+						<img src="./images/00000111111111.png" alt="">
+					</a>
+					<a class="tea1" href="javascript:;">莫林</a>
+					<a class="tea2" href="javascript:;">高级讲师</a>
+					<a class="tea3" href="javascript:;">曾担任微软外包高级测试经理，美国GNT科技有限公司测试经理兼质量监督师，HP测评实验室测试项目总监。在软件领域工作15年。</a>
+					<ul class="tea-list-child">
+						<li>Python</li>
+						<li>Ruby</li>
+						<li>测试经理</li>
+						<li>OpenInventor</li>
+						<li>白盒测试</li>
+						<li>测试团队管理</li>
+						<div class="clear"></div>
+					</ul>
+					<div class="tea4-box">
+						<a class="tea4" href="/index.php?m=content&c=index&a=lists&catid=18" target="_blank">查看更多简介</a>
+					</div>
+				</li>
+				<li>
+					<a class="a-img" href="javascript:;" target="_blank">
+						<img src="./images/0000000000022222.jpg" alt="">
+					</a>
+					<a class="tea1" href="javascript:;">王智</a>
+					<a class="tea2" href="javascript:;">高级讲师</a>
+					<a class="tea3" href="javascript:;">8年安全测试经验, 曾就职与联想，神州数码，持有CCIE R&S CCIE Security CISP等认证。多次对银行、电力、公安等事业单位进行安全培训，具有丰富的IT从业经验和教育心得，对各种协议/网络安全技术有深入研究。</a>
+					<ul class="tea-list-child">
+						<li>安全测试</li>
+						<li>Web安全渗透</li>
+						<li>企业安全管理</li>
+						<li>网络安全</li>
+						<div class="clear"></div>
+					</ul>
+					<div class="tea4-box">
+						<a class="tea4" href="/index.php?m=content&c=index&a=lists&catid=18" target="_blank">查看更多简介</a>
+					</div>
+				</li>
+				<li>
+					<a class="a-img" href="javascript:;" target="_blank">
+						<img src="./images/2017050355392993.png" alt="">
+					</a>
+					<a class="tea1" href="javascript:;">贾生</a>
+					<a class="tea2" href="javascript:;">专家讲师</a>
+					<a class="tea3" href="javascript:;">拥有多年的Java开发和项目管理经验。曾组织开发了基于微信端的新型金融理财综合解决方法，集微博、博客、分类信息和QQ为一体的综合性网络营销平台Marketing等。 </a>
+					<ul class="tea-list-child">
+						<li>JavaSE</li>
+						<li>Java Web</li>
+						<li>Struts2</li>
+						<li>Spring MVC</li>
+						<li>Spring、Hibernate</li>
+						<li>MyBatis</li>
+						<li>Tomcat</li>
+						<div class="clear"></div>
+					</ul>
+					<div class="tea4-box">
+						<a class="tea4" href="/index.php?m=content&c=index&a=lists&catid=18" target="_blank">查看更多简介</a>
+					</div>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+
+		<div class="job-content mt30">
+			<div class="job-content-box-left fl">
+				<h2 class="page-title-box">
+					<a class="page-title" href="/index.php?m=content&c=index&a=lists&catid=15" target="_blank">就业信息</a>
+					<a class="more" href="/index.php?m=content&c=index&a=lists&catid=15" target="_blank">more&gt;&gt;</a>
+					<div class="clear"></div>
+				</h2>
+				<div class="job-content-table" style="width:auto;">
+					<table>
+						<thead>
+							<tr>
+								<td class="f28">651</td>
+								<td><br>人/最近就业人员</td>
+								<td class="f28">12650</td>
+								<td>一线城市<br>元/平均薪资</td>
+								<td class="f28">650</td>
+								<td>一线城市<br>元/平均薪资</td>
+							</tr>
+						</thead>
+						<tbody><table>
+							<div class="scroll"> 
+     <ul class="sc clear-fix"> 
+      <li class="s1">姓名</li> 
+      <li class="s2">性别</li> 
+      <li class="s3">入职公司</li> 
+      <li class="s4">薪资</li> 
+      <li class="s5">职位</li> 
+      <li class="s6">就业时间</li> 
+     </ul> 
+     <div class="scroll-msg"> 
+      <ul class="clear-fix" style="margin-top: 0px;"> 
+         <li class="lix2"> <span class="s1">卓**</span> <span class="s2">男</span> <span class="s3">**国际</span> <span class="s4">12000</span> <span class="s5">python开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">査**</span> <span class="s2">男</span> <span class="s3">北京**科技有限公司</span> <span class="s4">12000</span> <span class="s5">python开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">周*</span> <span class="s2">男</span> <span class="s3">深圳**科技有限公司</span> <span class="s4">13000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">李*</span> <span class="s2">男</span> <span class="s3">深圳**科技有限公司</span> <span class="s4">12000</span> <span class="s5">python开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">谭*</span> <span class="s2">男</span> <span class="s3">深圳**网络传媒有限公司</span> <span class="s4">12000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">张*</span> <span class="s2">男</span> <span class="s3">深圳市**股份有限公司</span> <span class="s4">11000</span> <span class="s5">python开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">莫*</span> <span class="s2">男</span> <span class="s3">深圳**技术有限公司</span> <span class="s4">12000</span> <span class="s5">自动化测试工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">曾*</span> <span class="s2">男</span> <span class="s3">**股份</span> <span class="s4">10000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">何*</span> <span class="s2">男</span> <span class="s3">**科技有限公司</span> <span class="s4">10000</span> <span class="s5">自动化测试工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">董*</span> <span class="s2">男</span> <span class="s3">**科技</span> <span class="s4">12000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">刘*</span> <span class="s2">男</span> <span class="s3">上海**服务有限公司</span> <span class="s4">12000</span> <span class="s5">自动化测试工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">刘*</span> <span class="s2">男</span> <span class="s3">**控股有限公司</span> <span class="s4">12000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">杭*</span> <span class="s2">男</span> <span class="s3">**科技</span> <span class="s4">14000</span> <span class="s5">自动化测试工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">谢*</span> <span class="s2">男</span> <span class="s3">**科技</span> <span class="s4">14000</span> <span class="s5">python开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">郑*</span> <span class="s2">男</span> <span class="s3">**物流</span> <span class="s4">13000</span> <span class="s5">性能测试工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">傅*</span> <span class="s2">男</span> <span class="s3">**科技</span> <span class="s4">14000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">曾*</span> <span class="s2">男</span> <span class="s3">**科技</span> <span class="s4">12400</span> <span class="s5">性能测试工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">戴*</span> <span class="s2">男</span> <span class="s3">**科技</span> <span class="s4">11000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">高*</span> <span class="s2">男</span> <span class="s3">杭州**科技有限公司</span> <span class="s4">14000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">陈*</span> <span class="s2">男</span> <span class="s3">杭州**网络科技有限公司</span> <span class="s4">10000</span> <span class="s5">性能测试工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">叶*</span> <span class="s2">男</span> <span class="s3">**软件</span> <span class="s4">13000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">陈*</span> <span class="s2">男</span> <span class="s3">广州**网络</span> <span class="s4">11500</span> <span class="s5">python开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">郭*</span> <span class="s2">男</span> <span class="s3">广州**信息技术有限公司</span> <span class="s4">10000</span> <span class="s5">网络安全渗透师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">彭*</span> <span class="s2">男</span> <span class="s3">广州**文化传媒有限公司</span> <span class="s4">11000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix2"> <span class="s1">廖*</span> <span class="s2">男</span> <span class="s3">广州**文化股份有限公司</span> <span class="s4">9000</span> <span class="s5">测试开发工程师</span> <span class="s6">2017-08-21</span> </li>
+  <li class="lix1"> <span class="s1">朱**</span> <span class="s2">男</span> <span class="s3">北京**科技有限公司</span> <span class="s4">15000</span> <span class="s5">python开发工程师</span> <span class="s6">2017-09-11</span> </li>
+  <li class="lix2"> <span class="s1">谢**</span> <span class="s2">男</span> <span class="s3">浙江**管理有限公司</span> <span class="s4">11000</span> <span class="s5">python开发工程师</span> <span class="s6">2017-09-11</span> </li>
+  <li class="lix1"> <span class="s1">周**</span> <span class="s2">男</span> <span class="s3">北京**技术有限公司</span> <span class="s4">10000</span> <span class="s5">python开发工程师</span> <span class="s6">2017-09-11</span> </li>
+  
+ 
+     </ul> 
+     </div> 
+    </div> </table>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="job-content-box-right fr">
+				<h2 class="page-title-box">
+					<a class="page-title" href="/index.php?m=content&c=index&a=lists&catid=15" target="_blank">就业感言</a>
+					<a class="more" href="/index.php?m=content&c=index&a=lists&catid=15" target="_blank">more&gt;&gt;</a>
+					<div class="clear"></div>
+				</h2>
+				<div class="child-box">
+				{pc:content  action="lists" catid="15" order="updatetime DESC" thumb="1" num="4" return="info"}
+             		{loop $info $v}
+					<div class="child">
+					<a href="{$v['url']}" target="_blank" title="{$v['title']}">
+						<img src="{thumb($v[thumb],285,170)}" width="285" height="170">
+						<p>{str_cut($v['title'],32)}</p>
+						<span></span>
+					</a>
+					</div>
+					{/loop}
+              {/pc} 
+					
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="technology-content mt30">
+			<div class="technology-content-left fl">
+				<h2 class="page-title-box">
+					<a class="page-title" href="javascript:;" target="_blank">技术交流</a>
+					<a class="more" href="javascript:;" target="_blank">more&gt;&gt;</a>
+					<div class="clear"></div>
+				</h2>
+				<div class="technology-content-left-box radius-box">
+					{pc:content  action="lists" catid="16" order="updatetime DESC" thumb="1" num="1" return="info"}
+             		{loop $info $v}
+					<h2><a href="{$v['url']}" target="_blank" title="{$v['title']}"><em>HOT</em><i></i>{str_cut($v['title'],120)}</a></h2>
+					{/loop}
+              		{/pc}
+					<ul class="list fl">
+					{pc:content  action="lists" catid="16" order="updatetime DESC" thumb="1" num="6" return="info"}
+					<?php $kv = 1; ?>
+             		{loop $info $k=>$v}
+
+             			{if $kv !=1}
+						<li><a href="{$v['url']}" target="_blank" title="{$v['title']}"><i></i>{str_cut($v['title'],78)}</a></li>
+						{/if}
+						<?php $kv++; ?>
+						{/loop}
+              			{/pc}
+					</ul>
+					<a class="a-img fr" href="javascript:;" id="zzpic">
+						<img src="./images/QQ00111.png" alt="">
+						<img src="./images/QQ00111.png" alt="" style="display:none;">
+						<img src="./images/QQ00111.png" alt="" style="display:none;">
+					</a>
+					<script type="text/javascript">
+						var _thisSpic=0, _pics = $("#zzpic").find('img')
+						setInterval(function(){
+							_thisSpic++;
+							if(_thisSpic>_pics.length-1) _thisSpic=0;
+							_pics.eq(_thisSpic).fadeIn(500).siblings().hide()
+						},10000)
+					</script>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="technology-content-right radius-box fr">
+				<h2 class="page-title-box">
+					<a class="page-title" href="javascript:;" target="_blank">常见问题</a>
+					<a class="more" href="http://t.qq.com/ankeming2009" target="_blank">more&gt;&gt;</a>
+					<div class="clear"></div>
+				</h2>
+				<div class="technology-content-right-box">
+					{pc:content  action="lists" catid="17" order="updatetime DESC" thumb="1" num="1" return="info"}
+             		{loop $info $v}
+             		<h2><a href="{$v['url']}" target="_blank" title="{$v['title']}"><em>HOT</em><i></i>{str_cut($v['title'],60)}</a></h2>
+					{/loop}
+              		{/pc}
+
+					{pc:content  action="lists" catid="17" order="updatetime DESC" thumb="1" num="6" return="info"}
+					<?php $kv = 1; ?>
+             		{loop $info $k=>$v}
+             			{if $kv !=1}
+					<a class="first" href="{$v['url']}" target="_blank"><span>最新</span>{str_cut($v['title'],80,'')}</a>
+					{/if}
+					<?php $kv++; ?>
+					{/loop}
+          			{/pc}
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="school-content mt30">
+			<h2 class="page-title-box">
+				<a class="page-title" href="javascript:;" target="_blank">校园环境</a>
+				<div class="clear"></div>
+			</h2>
+			<div class="container">
+				<div id="container">
+					<ul id="content"> 
+						<li><img src="./images/29.png" alt=""></li>			
+						<li><img src="./images/4441.png" alt=""></li>			
+						<li><img src="./images/4442.png" alt=""></li>			
+						<li><img src="./images/32.png" alt=""></li>
+						<li><img src="./images/29.png" alt=""></li>			
+						<li><img src="./images/4441.png" alt=""></li>			
+						<li><img src="./images/4442.png" alt=""></li>			
+						<li><img src="./images/32.png" alt=""></li>
+					</ul> 
+				</div>
+			</div>
+
+			
+			<div class="clear"></div>
+		</div>
+		
+	<!-- end page -->
+	</div>
+
+	<style>
+	#ff3146
+	</style>
+
+	{template "content","footer_min"}
+	
+	<script src="./js/swiper.min.js"></script>
+	<script>
+		(function(){
+			$('.nav-child').click(function(){
+				$('.nav-child').removeClass('on')
+				$(this).addClass('on')
+			})
+			$('.advert span').click(function(){
+				$(this).parents('.advert').hide()
+			})
+			var swiper = new Swiper('.swiper-container', {
+		        pagination: '.swiper-pagination',
+		        nextButton: '.swiper-button-next',
+		        prevButton: '.swiper-button-prev',
+		        paginationClickable: true,
+		        spaceBetween: 30,
+		        centeredSlides: true,
+		        autoplay: 2500,
+		        autoplayDisableOnInteraction: false
+		    });
+
+		    
+		})()
+	</script>
+
+	
+
+ <script>
+ //就业滑动
+ $("div .scroll-msg").myScroll({
+        speed: 40,
+        rowHeight: 38
+});
+
+ //幻灯图隐藏按钮
+$(".swiper-wrapper").mouseover(function (){  
+    $(".swiper-button-prev").show();  
+    $(".swiper-button-next").show();
+}).mouseout(function (){  
+	$(".swiper-button-prev").hide();  
+    $(".swiper-button-next").hide();
+}); 
+$(".swiper-button-prev").mouseover(function (){  
+    $(".swiper-button-prev").show();  
+    $(".swiper-button-next").show();
+});
+$(".swiper-button-next").mouseover(function (){  
+    $(".swiper-button-prev").show();  
+    $(".swiper-button-next").show();
+});
+
+//倒计时开班
+function tj(atime,id){
+	var day = parseInt(atime / 1000 / 60 / 60 / 24);
+	var hour = parseInt(atime / 1000 / 60 / 60 % 24);
+	var minute = parseInt(atime / 1000 / 60 % 60);
+	var seconds = parseInt(atime / 1000 % 60);
+	$('#t'+id).html(day + "天" + hour + "时" + minute + "分" + seconds + "秒");
+	$('#d'+id).html(100-day+"%");
+	$('#dd'+id).css('top','-'+(100-day)+'%');
+}
+
+setInterval(function () {
+	var mysarr = new Array();
+	for (var i=1;i<6;i++)
+	{
+		var starttime_ = $('#s'+i).text();
+		var starttime = new Date(starttime_);
+		var nowtime = new Date();
+		var atime = starttime - nowtime;
+		tj(atime,i);
+	}
+}, 1000);
+
+
+//校园环境
+window.onload = function(){ 
+  
+    var segmentWidth = 0; 
+    $("#container #content li").each(function(){ 
+      segmentWidth+= $(this).outerWidth(true); 
+    }); 
+  
+    $("#container #content li").clone().appendTo($("#container #content")); 
+  
+    run(60000); 
+  
+    function run(interval){ 
+      $("#container #content").animate({"left":-segmentWidth}, interval,"linear",function(){ 
+        $("#container #content").css("left",0); 
+        run(60000); 
+      }); 
+    } 
+  
+    $("#container").mouseenter(function(){ 
+      $("#container #content").stop(); 
+    }).mouseleave(function(){ 
+      var passedCourse = -parseInt($("#container #content").css("left")); 
+      var time = 60000 * (1 - passedCourse/segmentWidth); 
+      run(time); 
+    }); 
+  }; 
+
+</script>
+</body>
+</html>

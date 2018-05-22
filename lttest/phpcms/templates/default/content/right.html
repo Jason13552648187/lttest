@@ -1,0 +1,20 @@
+<h2>精品文章</h2>
+				<div class="ConBox">
+					<ul class="txt">
+					{pc:content  action="position" posid="18" order="listorder DESC" num="10"}
+					 	{loop $data $r}
+						<li><a href="{$r[url]}"  target="_blank" >● &nbsp;{str_cut($r['title'],60,'')}</a></li>
+						{/loop}  
+            		 {/pc}  
+					</ul>
+				</div>
+				<h2>就业感言</h2>
+				<div class="ConBox">
+					<ul class="txt">
+					{pc:content  action="lists" catid="15" order="updatetime DESC" thumb="1" num="10" return="info"}
+					 	{loop $info $r}
+						<li><a href="{$r[url]}"  target="_blank" >● &nbsp; {str_cut($r['title'],60,'')}</a></li>
+						{/loop}  
+            		 {/pc}  
+					</ul>
+				</div>

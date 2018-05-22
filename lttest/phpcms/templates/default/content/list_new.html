@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{template "content","header_seo"}
+	
+</head>
+<body>
+<style>
+.ConBox2 li{
+	list-style-type: none;
+	width: 100%;
+    float: left;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 15px 0;
+    position: relative;
+}
+.ConBox2 li .pic{
+	width: 173px;
+    height: 112px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+
+}
+.ConBox2 li .rinfo{
+	float: left;
+    padding-left: 15px;
+    width: 570px;
+}
+.ConBox2 li .rinfo a {
+	font-size: 18px;
+}
+.ConBox2 li .rinfo .zy{
+	font-size: 14px;
+    padding-top: 4px;
+    color: #666;
+    line-height: 20px;
+}
+.ConBox2 li .rinfo .time{
+	color: #666;
+}
+.ConBox li .rinfo .time a{
+	color: #666;
+	font-size: 14px;
+}
+.crumbs{
+	margin-left:10px;
+	margin-bottom:10px;
+}
+.text-c{
+	margin:0 auto;
+	width: 500px;
+}
+.text-c a{
+	float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 9px;
+    border: 1px solid #cccccc;
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+}
+.text-c span{
+	float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 9px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+}
+</style>
+	
+
+	<div class="Page">
+	<!-- page start -->
+		<div class="nav-list mt30">
+			<h1 class="fl">
+				<a class="logo" href="javascript:;" target="_blank">
+					<img src="./images/logo.png" alt="">
+				</a>
+			</h1>
+			{template "content","header_ul"}
+			<div class="clear"></div>
+		</div>
+
+		<div class="optionMain">
+			<div class="Left">
+			<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+				<div class="ConBox ConBox2">
+				{pc:content  action="lists" catid="$catid" order="id DESC" page="$page" num="5"}
+					<ul>
+					{loop $data $r}
+						<li>
+                			<div class="pic">
+                				<a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],285,170)}" width="195" height="112"></a>
+                			</div>
+		                    <div class="rinfo">
+		                    	<a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a>
+		                        <p class='zy'>{$r[description]}</p>
+		                        <div class="time">
+		                        	<i>{date('Y-m-d H:i:s',$r[inputtime])}</i>
+		                        	<span>
+		                        		<a href="javascript:;"  class="tag">{$r[keywords]}</a>
+		                       		 </span>
+		                       	</div>
+		                    </div>
+                		</li>
+					{/loop}
+					</ul>
+					<div id="pages" class="text-c">{$pages}</div>
+{/pc}
+				</div>
+			</div>
+			<div class="Right" >
+				{template "content","right"}
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	{template "content","footer_min"}
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+</body>
+</html>

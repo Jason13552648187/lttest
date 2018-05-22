@@ -1,0 +1,89 @@
+<div class="footer-bg">
+		<div class="footer Page">
+			<ul class="footer-01 fl">
+				<li><h2>关于我们</h2></li>
+				<li><a href="javascript:;" target="_blank">公司介绍</a></li>
+				<li><a href="javascript:;" target="_blank">来校路线</a></li>
+				<li><a href="javascript:;" target="_blank">报名条件</a></li>
+				<li><a href="javascript:;" target="_blank">媒体报道</a></li>
+			</ul>
+			<ul class="footer-02 fl">
+				<li><h2>课程培训</h2></li>
+
+				{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+					{loop $data $k=>$r}
+					{if $r[type] ==1}
+					<li><a href="{$r[url]}" target="_blank">{$r[catname]}</a></li>
+				{/if}
+			{/loop}
+			{/pc}
+			</ul>
+			<ul class="footer-03 fl">
+				<li class="first tit"><h2>关注我们</h2></li>
+				<li class="first">
+					<img src="./images/weixin-h.png" alt="">
+					微信公众号
+					<div class="more">
+						<img src="./images/gongzonghao.png" alt="">
+						<p>◆</p>
+						<p class="p2">◆</p>
+					</div>
+				</li>
+				<li><a href="http://t.qq.com/ankeming2009" target="_blank"><img src="./images/xinlang-h.png" alt="">微博</a></li>
+				<li><a href="https://tieba.baidu.com/f?kw=%E6%B5%8B%E8%AF%95&fr=fenter&prequery=%E7%8B%BC%E8%85%BE%E6%B5%8B%E8%AF%95" target="_blank" ><img src="./images/baidu-h.png" alt="">百度贴吧</a></li>
+				<div class="clear"></div>
+			</ul>
+			<ul class="footer-04 fl">
+				<li><h2>客服热线</h2></li>
+				<li><a href="javascript:;" target="_blank">北京昌平区沙河镇北京科技职业学院校内&nbsp;&nbsp;010-57285612</a></li>
+				<li><a href="javascript:;" target="_blank">北京海淀区软件园东北旺北原软件学院主楼一层&nbsp;&nbsp;010-56158693</a></li>
+				<li><a href="javascript:;" target="_blank">北京朝阳区北京科技大学管庄校区校内&nbsp;&nbsp;010-56158693</a></li>
+				<li><a href="javascript:;" target="_blank">河南校区开封大学新校区3A楼信息工程学院一层118室&nbsp;&nbsp;010-56158693</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="ylink">
+        <h3>友情链接</h3>
+        <div class="link-list ">
+            <a href="http://edu.51cto.com/" target="_blank">51CTO学院</a> 
+            <a href="http://baidu.com/" target="_blank">百度</a>               
+        </div>
+    </div>
+	<div class="copyright">Copyright  © 2018 All rights reserved.版权所有汉科软（北京）科技有限公司 ICP备案号：京ICP备17063260号</div>
+<style>
+.ylink{
+	background: #fff;
+	width: 100%;
+	margin-top:1px;
+}
+.ylink h3{
+	color: #666;
+}
+.ylink .link-list{
+	margin-bottom: 10px;
+}
+.ylink .link-list a{
+	color: #999;
+	font-size:12px;
+	margin: 5px 15px 5px 0;
+}
+.ylink h3{
+	margin:0 0 0 30px; 
+	padding:10px 0px;
+}
+.ylink .link-list{
+	margin:0 0 0 30px;
+	padding-bottom: 22px; 
+}
+
+
+</style>
+
+
+	<div class="slider-box" style="text-align:center;">
+		<a href="http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1" target="_blank" class="s1">在线咨询</a>
+		<a href="http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1" target="_blank" class="s2">在线报名</a>
+		<a href="http://t.qq.com/ankeming2009" target="_blank" class="s3">社区微博</a>
+		<a href="javascript:void(0);" class="s4">二维码<img src="./images/gongzonghao.png"></a>
+	</div>	

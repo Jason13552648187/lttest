@@ -1,0 +1,35 @@
+
+			<ul class="fl">
+				{if $catid > 0}
+				<li><a class="nav-child" href="/" target="_blank">首页</a></li>
+				{else}
+				<li><a class="nav-child on" href="/" target="_blank">首页</a></li>
+				{/if}
+				{if $catid ==9 ||$catid ==10 ||$catid ==11 ||$catid ==12 ||$catid ==13}
+				<li><a class="nav-child on" href="javascript:;" >课程培训</a>
+				{else}
+				<li><a class="nav-child" href="javascript:;" >课程培训</a>
+				{/if}
+					<div class="more">
+					{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+					{loop $data $r}
+					{if $r[type] ==1}
+						<a href="{$r[url]}" target="_blank">{$r[catname]}</a>
+					{/if}
+					{/loop}
+					{/pc}
+					</div>
+				</li>
+				{if $catid ==18}
+				<li><a class="nav-child on" href="/index.php?m=content&c=index&a=lists&catid=18" target="_blank">师资团队</a></li>
+				{else}
+				<li><a class="nav-child" href="/index.php?m=content&c=index&a=lists&catid=18" target="_blank">师资团队</a></li>
+				{/if}
+
+				<li><a class="nav-child" href="https://hkrtest.ke.qq.com/#tab=1&category=-1&tuin=4d2fc0ee" target="_blank">视频课程</a></li>
+
+				<li><a class="nav-child {if $catid ==15} on {/if}" href="/index.php?m=content&c=index&a=lists&catid=15" target="_blank">就业信息</a></li>
+				<li><a class="nav-child {if $catid ==6} on {/if}" href="/index.php?m=content&c=index&a=lists&catid=6" target="_blank">狼腾热点</a></li>
+				<li><a class="nav-child" href="http://vipwebchat.tq.cn/pageinfo.jsp?version=vip&admiuin=9648362&ltype=1&iscallback=1&page_templete_id=113143&is_message_sms=0&is_send_mail=0&action=acd&acd=1&type_code=1" target="_blank">我要报名</a></li>
+				<li><a class="nav-child {if $catid ==2} on {/if}" href="/index.php?m=content&c=index&a=lists&catid=2" target="_blank">关于我们</a></li>
+			</ul>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{template "content","header_seo"}
+	
+</head>
+<body>
+
+
+	<div class="Page">
+	<!-- page start -->
+		<div class="nav-list mt30">
+			<h1 class="fl">
+				<a class="logo" href="javascript:;" target="_blank">
+					<img src="./images/logo.png" alt="">
+				</a>
+			</h1>
+			{template "content","header_ul"}
+			<div class="clear"></div>
+		</div>
+
+		<div class="optionMain">
+			<div class="Left">
+			<div class="crumbs"  >{catpos($catid)} 正文</div>
+				<div class="ConBox ConBox2">
+					<h1>{$title}
+					<br>
+					<span style="font-size: 14px;">{$inputtime}&nbsp;&nbsp;&nbsp;{if !empty($copyfrom)}来源：{$copyfrom}&nbsp;&nbsp;&nbsp;{/if} </span>
+					</h1>
+					{$content}
+				</div>
+			</div>
+			<div class="Right">
+				{template "content","right"}
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	{template "content","footer_min"}
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+</body>
+</html>
